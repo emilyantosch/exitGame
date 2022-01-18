@@ -1,0 +1,85 @@
+\documentclass[usenames,dvipsnames,10pt]{beamer}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[german]{babel}
+\usepackage{tikz}
+\title{Bachelorprojekt - Vorstellung}
+\date[ISPN ’80]{Bachelorprojekt - \today}
+\author{Emily Antosch \and Karl Döring \and Jonah Mai \and Florian Tietjen}
+
+\usetheme{hawsx}
+\setbeamertemplate{section in toc}{%
+
+      \begin{tikzpicture}
+
+        \fill[color=UmUBlue] (1,1) circle (0.2cm);
+        \node[anchor=center] (xlab) at (1,1) {\color{white}\inserttocsectionnumber};
+        \node[anchor=west] (ylab) at (1.2,0.97) {\color{UmUBlue}\sffamily\textsf{\inserttocsection}};
+      \end{tikzpicture}
+  }
+
+
+\begin{document}
+
+    \begin{frame}
+        \titlepage
+    \end{frame}
+    \begin{frame}{Inhaltsverzeichnis}
+        \tableofcontents
+    \end{frame}
+    \section{Organisation}
+    \begin{frame}{Organisation}
+        \begin{itemize}
+            \item Projektleiterin: Emily Antosch
+            \pause
+            \item Escape-Game für das Labor in Programmieren 2
+            \pause
+            \item Umsetzung als WebApp
+            \pause
+            \item Lehrende und Lernende unterstützen
+        \end{itemize}
+    \end{frame}
+    \section{Umsetzung}
+    \begin{frame}{Umsetzung}
+      \begin{itemize}
+        \item Um unser Ziel zu erreichen, haben wir einige Tools ausgewählt
+        \item Erfahrung, Beliebtheit und Eignung für die Aufgaben
+        \item Verbesserung über Vanilla JS/HTML/CSS
+        \item Lernerfolg der Teilnehmer für das weitere Leben
+      \end{itemize}
+    \end{frame}
+    \begin{frame}{React.js}
+        \begin{itemize}
+            \item Hauptframework (Frontend)
+            \item Übernimmt Hauptaufgaben wie DOM, Rendering und Hooks
+            \item Beliebtestes Frontend-Framework, deshalb auch viel Support
+            \item Erlaubt viel Integration mit anderen Tools
+            \item Läuft mit TypeScript/JSX
+        \end{itemize}
+    \end{frame}
+    \begin{frame}{TailwindCSS}
+        \begin{itemize}
+            \item CSS-Framework, was die Designarbeit vereinfacht
+            \item Verlassen von JSX/HTML nicht nötig
+            \item Erweiterbar und Anpassbar auf unser Design
+            \item Modern, leicht
+        \end{itemize}
+    \end{frame}
+    \begin{frame}{Firebase/UserAuth}
+            \begin{itemize}
+                \item Um die User für die einzelnen Labore freizuschalten und in eine Datenbank zu schreiben, möchten wir Firebase verwenden
+                \item Leichter als eine eigene Datenbank, wie MongoDB oder MySQL
+                \item User Authentication ziemlich leicht
+                \item Ist nicht ganz ohne Kosten, allerdings bleibt dies für wenige Anfragen extrem wahrscheinlich
+            \end{itemize}
+    \end{frame}
+    \begin{frame}{Git/Github}
+            \begin{itemize}
+                \item Um die Pipeline möglichst einfach und fehlerunanfällig zu machen, sollte Version Control verwendet werden
+                \item Git ist mit Abstand das einfachste, mächtigste und vielseitige Programm für diesen Zweck
+                \item Github ist der größte Anbieter für Online-Repositories für Teams in der Software-Entwicklung
+                \item Großer Lernfaktor, Git ist essenzieller Teil von fast jeder Pipeline
+                \item Mögliches Hosting über Github Pages
+            \end{itemize}
+    \end{frame}
+\end{document}
